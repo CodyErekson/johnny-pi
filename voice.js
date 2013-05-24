@@ -9,7 +9,7 @@ function playVoice(voiceFile){
 		//play function
 		play: function play() {
 			console.log("Playing: " + voiceFile);
-			var vn = "voice/" + voiceFile;
+			var fn = "audio/" + voiceFile + ".mp3";
 			fs.createReadStream(fn)
 			  .pipe(new lame.Decoder)
 			  .on('format', console.log)
